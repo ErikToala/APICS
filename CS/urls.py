@@ -36,6 +36,6 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^',include(router.urls)),
-    re_path(r'^api/v1/login',include('Login.urls')),
-    #re_path(r'^api/v1/example',include('example.urls'))
+    re_path(r'^api/v1/',include('Login.urls')),
+    #re_path(r'^api/v1/login/example_lista2/$', views.ExampleList2.as_view)
 ]

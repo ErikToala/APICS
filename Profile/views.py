@@ -23,6 +23,9 @@ from Profile.serializer import Profile2Serializers
 from Profile.serializer import GeneroSerializers,Estado_civilSerializers,OcupacionSerializers,EstadoSerializers
 from Profile.serializer import CiudadSerializers
 
+
+schema_view = get_swagger_view(title='Pastebin API')
+
 class GeneroLista(APIView):
     def get(self, request, format=None):
         print("Metodo get filter")

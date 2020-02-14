@@ -14,6 +14,7 @@ urlpatterns = [
     re_path(r'ejercicio_profile/estado/$', views.EstadoLista.as_view()),
     re_path(r'ejercicio_profile/ciudad/$', views.CiudadLista.as_view()),
     
+    
 
     #Hola soy Erik
 ]

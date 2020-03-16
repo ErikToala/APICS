@@ -7,28 +7,28 @@ from Profile.models import Genero,Estado_civil,Ocupacion,Estado,Ciudad
 class GeneroSerializers(serializers.ModelSerializer):
     class Meta:
         model = Genero
-        fields = ('sexo')
+        fields = ('__all__')
 
 class Estado_civilSerializers(serializers.ModelSerializer):
     class Meta:
         model = Estado_civil
-        fields = ('estado_civil')
+        fields = ('__all__')
 
 
 class OcupacionSerializers(serializers.ModelSerializer):
     class Meta:
         model = Ocupacion
-        fields = ('ocupacion')
+        fields = ('__all__')
 
 class EstadoSerializers(serializers.ModelSerializer):
     class Meta:
         model = Estado
-        fields = ('nombre')
+        fields = ('__all__')
 
 class CiudadSerializers(serializers.ModelSerializer):
     class Meta:
         model = Ciudad
-        fields = ('ciudad','estado')
+        fields = ('__all__')
 
 
 class Profile2Serializers(serializers.ModelSerializer):

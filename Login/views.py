@@ -11,13 +11,27 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework import generics
-
+from django.conf.urls import url
 from Login.models import Example2
 
 from Login.serializer import Example2Serializer
+import coreapi
+#from rest_framework.schemas import AutoShema
+
+#class ClaseAutoShema(AutoShema):
+#    def get_manual_fields(self, path, method):
+#        extra_fields=[]
+#        if method.lower() in ['post']:
+#            extra_fields = [
+#                coreapi.Field('name'),
+#                coreapi.Field('year'),
+#            ]
+#        manual_fields = super().get_manual_fields(path,method)
+#        return manual_fields + extra_fields
+    
 
 class ExampleList2(APIView):
-
+#    schema = ClaseAutoShema()
     def get(self, request, format=None):
         print("Metodo get filter")
         queryset = Example2.objects.filter(delete=False)
@@ -32,7 +46,6 @@ class ExampleList2(APIView):
             datas = serializer.data
             return Response(datas)
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
-
 
 
 

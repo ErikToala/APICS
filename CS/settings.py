@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
-    'rest_framework_api_key',
     'Login',
     'Profile',
 ]
@@ -68,9 +67,6 @@ SWAGGER_SETTINGS = {
             'type': 'apiKey',
             'name': 'Authorization',
             'in': 'header'
-        },
-        "security":{
-            "ApiKeyAuth": []
         },
     }
 }
